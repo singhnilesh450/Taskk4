@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Style/bootstrap.css" />
+    <link rel="stylesheet" href="Style/style.css" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-body">
+      <div class="container-fluid mx-4 px-0 cont_stylin">
+        <div class="styl mr-3">
+        <div class="row">
+          
+          <div class="col-md-2 col-sm-12 fix">
+            <img
+              src="images/saketa-logo.webp"
+              alt="skaketa-log"
+              width="200"
+              class="img-fluid logo"
+            />
+            <div class="icon">
+              <button class="btn btn-secondary">
+                <i class="fas fa-user"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-lg-block ">
+            <div class="top text-sky-500">Employee Directory</div>
+            <div class="bottom">The Ultimate People Directory Experience</div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-lg-4 mt-3">
+            <div class="last_cont d-flex ">
+              <div class="text d-flex mr-2">
+                <div class="text1">Welcome,</div>
+                <div class="text2">Andrew Philips</div>
+              </div>
+              <img
+                src="images/user-pic.webp"
+                alt="User-Photo"
+                height="50"
+                ;
+                width="50"
+                ;
+                class="img-fluid user_pic"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+<!-- Left Side Box for Description -->
+    <section class="main-box mx-4 d-flex mt-5">
+      <div class="box1">
+        <div class="title">Departments</div>
+        <ul class="list1">
+          <li>IT (21)</li>
+          <li>Human Resources (2)</li>
+          <li>MD (1)</li>
+          <li>Sales (4)</li>
+        </ul>
+        <div class="title">Offices</div>
+        <ul class="list1">
+          <li>Seattle (1)</li>
+          <li>India (1)</li>
+        </ul>
+        <div class="title">Job Titles</div>
+        <ul class="list1 extra">
+          <li>SharePoint Practice Head (1)</li>
+          <li>.Net Development Lead (1)</li>
+          <li>Recruiting Expert (1)</li>
+          <li>BI Developer (1)</li>
+          <li>Business Analyst (1)</li>
+        </ul>
+        <a href="#" class="view">view more</a>
+      </div>
+
+      <!-- Right side Box holding search and filter option -->
+      <div class="container px-0 box2">
+      <div class="row"><div class="flex-inline flex-wrap">
+          <button type="button" class="all btn btn-primary"> <i class="fas fa-user"></i></button>
+          <button type="button" class="all btn btn-primary">A</button>
+          <button type="button" class="all btn btn-primary">B</button>
+          <button type="button" class="all btn btn-primary">C</button>
+          <button type="button" class="all btn btn-primary">D</button>
+          <button type="button" class="all btn btn-primary">E</button>
+          <button type="button" class="all btn btn-primary">F</button>
+          <button type="button" class="all btn btn-primary">G</button>
+          <button type="button" class="all btn btn-primary">H</button>
+          <button type="button" class="all btn btn-primary">I</button>
+          <button type="button" class="all btn btn-primary">J</button>
+          <button type="button" class="all btn btn-primary">K</button>
+          <button type="button" class="all btn btn-primary">L</button>
+          <button type="button" class="all btn btn-primary">M</button>
+          <button type="button" class="all btn btn-primary">N</button>
+          <button type="button" class="all btn btn-primary">O</button>
+          <button type="button" class="all btn btn-primary">P</button>
+          <button type="button" class="all btn btn-primary">Q</button>
+          <button type="button" class="all btn btn-primary">R</button>
+          <button type="button" class="all btn btn-primary">S</button>
+          <button type="button" class="all btn btn-primary">T</button>
+          <button type="button" class="all btn btn-primary">U</button>
+          <button type="button" class="all btn btn-primary">V</button>
+          <button type="button" class="all btn btn-primary">W</button>
+          <button type="button" class="all btn btn-primary">X</button>
+          <button type="button" class="all btn btn-primary">Y</button>
+          <button type="button" class="all btn btn-primary">Z</button>
+
+          <!-- Search Row -->
+          <div class="d-flex flex-wrap flex-sm-column flex-md-row flex-lg-row search clear-fix">
+            <div class="fir">
+             
+            <label class="d-inline "for="search">Search</label>
+            
+            <input
+              type="text"
+              class="form-control-sm py-3"
+              placeholder="Enter any Keyword"
+            />
+          
+         
+          <button class="ser btn btn-success mx-3">Clear</button>
+        
+        </div>
+        <div class="secc">
+          <label class="d-inline mr-3"for="search">Filter By</label>
+          <select class="form-select form-select-lg py-2 px-3" aria-label="Default select example">
+    
+            <option selected>Preffered Name</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="thi">
+          <button  class="btn btn-primary btn_align ml-auto" data-toggle="modal" data-target="#contactModal" id="add_emp">Add Employee</button>
+        </div>
+        </div>
+          
+          <p class="desc mt-3"><strong>Note: </strong>Please use the advanced filter options to refine your results</p>
+        </div>
+        <!-- Template  -->
+<template>           
+   <div class="col-lg-3 col-md-4 col-sm-6 carr" id="upper">
+  <div class="card border-primary bg-secondary mb-3 mb-resp" id="inner">
+    <div class="card-body" id="cardBody">
+      <div class="card-desc d-flex " id="cardDesc">
+            <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start" id="imagee">
+         <div class="descc align-flex-end">
+            <h6 class="card-title mb-0"id="tit0"></h6>
+            <p class="card-text mb-0" id="tit1"></p>
+            <p class="card-text mb-0" id=""tit2><small class="text-muted"></small></p>
+            <span><i class="fa-solid fa-square-phone" id="icon1"></i></span> 
+            <span><i class="fa-solid fa-envelope"id="icon1"></i></span> 
+            <span><i class="fa-solid fa-comment"id="icon1"></i></span>
+            <span><i class="fa-solid fa-star-sharp"id="icon1"></i></span>
+            <span><i class="fa-solid fa-heart"id="icon1"></i></span>
+     </div>
+     </div>
+    </div>
+  </div>
+</div>
+</template>
+<!-- •	First Name
+•	Last Name
+•	Preferred Name (auto populated from First Name and Last Name)
+•	Email
+•	Job Title
+•	Office
+•	Department
+•	Phone Number
+•	Skype ID -->
+
+
+      <!-- Modal to add employee -->
+        <div class="modal fade text-dark" id="contactModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add Info</h5>
+                <button class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="" onsubmit="return validation()">
+                  <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" class="form-control" id="first-name"/>
+                    <span id="firstt"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" />
+                    <span id="lastt"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Preferred Name</label>
+                    <input type="text" class="form-control" />
+                    <span id="dd"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email-check" />
+                    <span id="emailCheck"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Job Title</label>
+                    <input type="text" class="form-control" />
+                    <span id="firstt"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Office</label>
+                    <input type="text" class="form-control" />
+                    <span id="firsttt"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Department</label>
+                    <select class="form-select form-select-lg" id="department" aria-label="Default select example">
+    
+                      <option selected>Product Engineering</option>
+                      <option value="1">IT</option>
+                      <option value="2">Product Engineering</option>
+                      <option value="3">M365</option>
+                    </select>
+                    <span id="rstt"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="tel" name="telphone" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"id="phoneNum"title="Ten digits code" required/>   
+                    <span id="phone-Num"class="text-danger font-weight-bold"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Skype Id</label>
+                    <input type="email" class="form-control"  id="skype"/>
+                    <span id="skype-email"class="text-danger font-weight-bold"></span>
+                  </div>
+                
+              </div>
+              <div class="modal-footer">
+                <input type="submit" name="submit" value="submit"class="btn btn-primary btn-block" id="bt_add_emp"/>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      <!-- <script>function validation() {
+        console.log("hoss");
+        var firstName = document.getElementById("first-name").value;
+        if (firstName == "") {
+          document.getElementById("firstt").innerHTML = " **Please fill First Name";
+        }
+        return false;
+      }</script> -->
+      
+
+      <!-- section holding cards -->
+      <section id="boxes" class="pt-2">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                        <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                     <div class="descc align-flex-end">
+                        <h6 class="card-title mb-0">Anthony Morris</h6>
+                        <p class="card-text mb-0">SharePoint Practice Head</p>
+                        <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                        <span><i class="fa-solid fa-square-phone"></i></span> 
+                        <span><i class="fa-solid fa-envelope"></i></span> 
+                        <span><i class="fa-solid fa-comment"></i></span>
+                        <span><i class="fa-solid fa-star-sharp"></i></span>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                 </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mr-0mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                  <p class="card-text mb-0">SharePoint Practice Head</p>
+                  <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                  <span><i class="fa-solid fa-square-phone"></i></span> 
+                  <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                   <span><i class="fa-solid fa-star-sharp"></i></span>
+                  <span><i class="fa-solid fa-heart"></i></span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                   <p class="card-text mb-0">SharePoint Practice Head</p>
+                    <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                   <span><i class="fa-solid fa-square-phone"></i></span> 
+                   <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                     <span><i class="fa-solid fa-star-sharp"></i></span>
+                   <span><i class="fa-solid fa-heart"></i></span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class=""align-flex-start>
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                  <p class="card-text mb-0">SharePoint Practice Head</p>
+                     <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                   <span><i class="fa-solid fa-square-phone"></i></span> 
+                   <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                    <span><i class="fa-solid fa-star-sharp"></i></span>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                 </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                        <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                     <div class="descc align-flex-end">
+                        <h6 class="card-title mb-0">Anthony Morris</h6>
+                        <p class="card-text mb-0">SharePoint Practice Head</p>
+                        <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                        <span><i class="fa-solid fa-square-phone"></i></span> 
+                        <span><i class="fa-solid fa-envelope"></i></span> 
+                        <span><i class="fa-solid fa-comment"></i></span>
+                        <span><i class="fa-solid fa-star-sharp"></i></span>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                 </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                  <p class="card-text mb-0">SharePoint Practice Head</p>
+                  <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                  <span><i class="fa-solid fa-square-phone"></i></span> 
+                  <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                   <span><i class="fa-solid fa-star-sharp"></i></span>
+                  <span><i class="fa-solid fa-heart"></i></span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                   <p class="card-text mb-0">SharePoint Practice Head</p>
+                    <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                   <span><i class="fa-solid fa-square-phone"></i></span> 
+                   <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                     <span><i class="fa-solid fa-star-sharp"></i></span>
+                   <span><i class="fa-solid fa-heart"></i></span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 carr">
+              <div class="card border-primary bg-secondary mb-3 mb-resp">
+                <div class="card-body">
+                  <div class="card-desc d-flex ">
+                  <img src="images/user-pic.webp" alt="" width="75" height="75" class=""align-flex-start>
+                  <div class="descc align-flex-end">
+                  <h6 class="card-title mb-0">Anthony Morris</h6>
+                  <p class="card-text mb-0">SharePoint Practice Head</p>
+                     <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
+                   <span><i class="fa-solid fa-square-phone"></i></span> 
+                   <span><i class="fa-solid fa-envelope"></i></span> 
+                   <span><i class="fa-solid fa-comment"></i></span>
+                    <span><i class="fa-solid fa-star-sharp"></i></span>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                 </div>
+                 </div>
+               </div>
+             </div> -->
+          
+        </div>
+      </section>
+    </section>
+    
+  </div>
+
+
+    <!-- bootstrap 5 cdn and font awesome scripts -->
+<script src="Script/script.js"></script>
+    <script src="https://kit.fontawesome.com/afb6be13e3.js" crossorigin="anonymous"></script>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+// .header-body {
+//   // margin-top: 1rem;
+//   // height: 5rem;
+//   // width: 90vw !important;
+//   // margin-left: 5vw;
+//   // margin-right: 5vw;
+// }
+// .container-
+.cont_stylin {
+}
+
+.top {
+  font-size: 2rem;
+  color: rgb(2, 192, 192);
+}
+// .second {
+// }
+.logo {
+  margin-top: 1rem;
+}
+.text {
+  font-size: 1.4rem;
+}
+.text1 {
+  color: rgb(0, 185, 185);
+  padding-right: 5px;
+}
+.icon {
+  display: none;
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 150px;
+  }
+  .icon {
+    margin-left: 0;
+  }
+  .btn {
+    // width: 2rem;
+    // height: 2rem;
+  }
+  .fir {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .secc {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    margin-left: 0.2rem;
+  }
+  .logo {
+    width: 180px;
+  }
+
+  .last_cont {
+    display: none !important;
+  }
+  .clear-fix::after {
+    clear: right;
+    content: "";
+    display: block;
+  }
+  .search {
+    flex-direction: column;
+  }
+  .fir {
+    margin-bottom: 1rem;
+  }
+  .secc {
+    margin-bottom: 1rem;
+  }
+  .icon {
+    display: inline-block;
+    margin-left: 6rem;
+    margin-top: 1rem;
+    .btn {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main-box {
+    flex-direction: column;
+  }
+  .icon {
+    float: right;
+  }
+}
+@media (max-width: 1000px) {
+  .box1 {
+    flex-basis: 30%;
+  }
+
+  .box2 {
+    flex-basis: 70%;
+  }
+  .last_cont {
+    float: right;
+  }
+}
+
+.list1 {
+  list-style: none;
+  padding-left: 0;
+}
+.title {
+  font-weight: bold;
+}
+.view {
+  text-decoration: none;
+  color: aqua;
+}
+.extra {
+  margin-bottom: 0;
+}
+.box1 {
+  flex-basis: 17%;
+  .btn-primary {
+    // margin-right: 0.3rem;
+    width: 2rem;
+    color: aqua;
+  }
+}
+.box2 {
+  flex-basis: 83%;
+}
+
+.all {
+  margin-bottom: 1rem;
+}
+.main-box {
+  margin-top: 1rem;
+}
+.descc {
+  margin-left: 1rem;
+  // width: 10rem;
+}
+.card {
+  width: 18rem;
+  // margin-right: 0.1rem;
+  border: unset;
+  border-radius: 0;
+}
+.card-desc p {
+  font-size: 0.8rem;
+}
+
+.carr {
+  // margin-left: 0.5rem;
+  margin-right: 0;
+}
+@media (min-width: 992px) {
+  .col-lg-3 {
+    max-width: unset;
+  }
+  .thi {
+    margin-left: auto;
+  }
+}
+.btn_align {
+  // float: right;
+}
+.styl {
+  border-bottom: 1px solid rgb(56, 52, 52);
+}
+#boxes {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid rgb(201, 194, 194);
+}
+.btn {
+  border-radius: unset;
+}
