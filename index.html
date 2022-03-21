@@ -62,20 +62,23 @@
 <!-- Left Side Box for Description -->
     <section class="main-box mx-4 d-flex mt-5">
       <div class="box1">
-        <div class="title">Departments</div>
+        <!-- <div class="title1">Departments</div> -->
         <ul class="list1">
-          <li>IT (21)</li>
-          <li>Human Resources (2)</li>
-          <li>MD (1)</li>
-          <li>Sales (4)</li>
+          <strong>Departments</strong>
+          <li class="list-items">IT (21)</li>
+          <li class="list-items">Human Resources (2)</li>
+          <li class="list-items">MD (1)</li>
+          <li class="list-items">Sales (4)</li>
         </ul>
-        <div class="title">Offices</div>
-        <ul class="list1">
+        <!-- <div class="title2">Offices</div> -->
+        <ul class="list2">
+          <strong>Offices</strong>
           <li>Seattle (1)</li>
           <li>India (1)</li>
         </ul>
-        <div class="title">Job Titles</div>
-        <ul class="list1 extra">
+        <!-- <div class="title3">Job Titles</div> -->
+        <ul class="list3 extra">
+          <strong>Job Titles</strong>
           <li>SharePoint Practice Head (1)</li>
           <li>.Net Development Lead (1)</li>
           <li>Recruiting Expert (1)</li>
@@ -87,7 +90,9 @@
 
       <!-- Right side Box holding search and filter option -->
       <div class="container px-0 box2">
-      <div class="row"><div class="flex-inline flex-wrap">
+      <div class="row">
+        <div class="flex-inline flex-wrap">
+          <div class="btnGroup">
           <button type="button" class="all btn btn-primary"> <i class="fas fa-user"></i></button>
           <button type="button" class="all btn btn-primary">A</button>
           <button type="button" class="all btn btn-primary">B</button>
@@ -115,7 +120,7 @@
           <button type="button" class="all btn btn-primary">X</button>
           <button type="button" class="all btn btn-primary">Y</button>
           <button type="button" class="all btn btn-primary">Z</button>
-
+        </div>
           <!-- Search Row -->
           <div class="d-flex flex-wrap flex-sm-column flex-md-row flex-lg-row search clear-fix">
             <div class="fir">
@@ -125,6 +130,7 @@
             <input
               type="text"
               class="form-control-sm py-3"
+              id="searchBox"
               placeholder="Enter any Keyword"
             />
           
@@ -134,16 +140,16 @@
         </div>
         <div class="secc">
           <label class="d-inline mr-3"for="search">Filter By</label>
-          <select class="form-select form-select-lg py-2 px-3" aria-label="Default select example">
+          <select onchange="getSelectedValue(event)" class="form-select form-select-lg py-2 px-3" aria-label="Default select example">
     
             <option selected>Preffered Name</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">Office</option>
+            <option value="2">Job Title</option>
+            <option value="3">Department</option>
           </select>
         </div>
         <div class="thi">
-          <button  class="btn btn-primary btn_align ml-auto" data-toggle="modal" data-target="#contactModal" id="add_emp">Add Employee</button>
+          <button  class="btn btn-primary btn_align ml-auto show-modal"  id="add_emp">Add Employee</button>
         </div>
         </div>
           
@@ -180,108 +186,90 @@
 •	Department
 •	Phone Number
 •	Skype ID -->
-<!-- <div class="modal hidden">
+<div class="modal " id="contactModal">
   <button class="close-modal">&times;</button>
-  <h1>I'm a modal window 😍</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-    mollit anim id est laborum.
-  </p>
-</div>
-<div class="overlay hidden"></div> -->
+  <h3>I'm a modal window 😍</h3>
+  <form action="" onsubmit="return validation()" id="form-target">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="first-name"/>
+      <span id="firstt"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="last-name" />
+      <span id="lastt"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="name">Preferred Name</label>
+      <input type="text" class="form-control" />
+      <span id="dd"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email-check" />
+      <span id="emailCheck"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="name">Job Title</label>
+      <input type="text" class="form-control" id="job-titlee"/>
+      <span id="firstt"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="name">Office</label>
+      <input type="text" class="form-control"  id="office-input"/>
+      <span id="firsttt"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="name">Department</label>
+      <select class="form-select form-select-lg" id="department" aria-label="Default select example">
 
-      <!-- Modal to add employee -->
-        <div class="modal fade text-dark" id="contactModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Add Info</h5>
-                <button class="close" data-dismiss="modal">
-                  <span>&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form action="" onsubmit="return validation()">
-                  <div class="form-group">
-                    <label for="name">First Name</label>
-                    <input type="text" class="form-control" id="first-name"/>
-                    <span id="firstt"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Last Name</label>
-                    <input type="text" class="form-control" id="last-name" />
-                    <span id="lastt"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Preferred Name</label>
-                    <input type="text" class="form-control" />
-                    <span id="dd"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email-check" />
-                    <span id="emailCheck"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Job Title</label>
-                    <input type="text" class="form-control" id="job-titlee"/>
-                    <span id="firstt"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Office</label>
-                    <input type="text" class="form-control" />
-                    <span id="firsttt"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Department</label>
-                    <select class="form-select form-select-lg" id="department" aria-label="Default select example">
+        <option selected>Product Engineering</option>
+        <option value="1">IT</option>
+        <option value="2">Product Engineering</option>
+        <option value="3">M365</option>
+        <option value="3">IT</option>
+        <option value="3">Sales</option>
+        <option value="3">MD</option>
+        <option value="3">Human Resources</option>
+
+      </select>
+      <span id="rstt"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="number">Phone Number</label>
+      <input type="tel" name="telphone" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"id="phoneNum"title="Ten digits code" required/>   
+      <span id="phone-Num"class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+      <label for="email">Skype Id</label>
+      <input type="email" class="form-control"  id="skype"/>
+      <span id="skype-email"class="text-danger font-weight-bold"></span>
+    </div>
+  
+     
     
-                      <option selected>Product Engineering</option>
-                      <option value="1">IT</option>
-                      <option value="2">Product Engineering</option>
-                      <option value="3">M365</option>
-                    </select>
-                    <span id="rstt"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="number">Phone Number</label>
-                    <input type="tel" name="telphone" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"id="phoneNum"title="Ten digits code" required/>   
-                    <span id="phone-Num"class="text-danger font-weight-bold"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Skype Id</label>
-                    <input type="email" class="form-control"  id="skype"/>
-                    <span id="skype-email"class="text-danger font-weight-bold"></span>
-                  </div>
-                
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-primary btn-block" id="bt_add_emp">Submit</button>
-              </div>
-            </form>
-            </div>
-          </div>
-        </div>
-      <!-- <script>function validation() {
-        console.log("hoss");
-        var firstName = document.getElementById("first-name").value;
-        if (firstName == "") {
-          document.getElementById("firstt").innerHTML = " **Please fill First Name";
-        }
-        return false;
-      }</script> -->
-      
+    </form>
+    <button class="btn btn-primary btn-block" id="bt_add_emp">Submit</button>
+</div>
 
-      <!-- section holding cards -->
+
+<div class="overlay hidden"></div>
+
+    
       
+<!-- dummy -->
+<section id="boxes" class="pt-2">
+        <div class="container-fluid" id="targetRow">
+          
+          
+            </div>
+          </section>
+      <!-- section holding cards -->
+<!--       
       <section id="boxes"></section>
     </section>
-    
+     -->
   </div>
 
 
