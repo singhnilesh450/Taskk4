@@ -157,9 +157,9 @@
       <div class="card-desc d-flex " id="cardDesc">
             <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start" id="imagee">
          <div class="descc align-flex-end">
-            <h6 class="card-title mb-0"id="tit0"></h6>
+            <h6 class="card-title mb-0" id="tit0"></h6>
             <p class="card-text mb-0" id="tit1"></p>
-            <p class="card-text mb-0" id=""tit2><small class="text-muted"></small></p>
+            <p class="card-text mb-0" id="tit2"><small class="text-muted"></small></p>
             <span><i class="fa-solid fa-square-phone" id="icon1"></i></span> 
             <span><i class="fa-solid fa-envelope"id="icon1"></i></span> 
             <span><i class="fa-solid fa-comment"id="icon1"></i></span>
@@ -180,7 +180,20 @@
 •	Department
 •	Phone Number
 •	Skype ID -->
-
+<!-- <div class="modal hidden">
+  <button class="close-modal">&times;</button>
+  <h1>I'm a modal window 😍</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.
+  </p>
+</div>
+<div class="overlay hidden"></div> -->
 
       <!-- Modal to add employee -->
         <div class="modal fade text-dark" id="contactModal">
@@ -216,7 +229,7 @@
                   </div>
                   <div class="form-group">
                     <label for="name">Job Title</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" id="job-titlee"/>
                     <span id="firstt"class="text-danger font-weight-bold"></span>
                   </div>
                   <div class="form-group">
@@ -248,7 +261,7 @@
                 
               </div>
               <div class="modal-footer">
-                <input type="submit" name="submit" value="submit"class="btn btn-primary btn-block" id="bt_add_emp"/>
+                <button class="btn btn-primary btn-block" id="bt_add_emp">Submit</button>
               </div>
             </form>
             </div>
@@ -265,163 +278,8 @@
       
 
       <!-- section holding cards -->
-      <section id="boxes" class="pt-2">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                        <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                     <div class="descc align-flex-end">
-                        <h6 class="card-title mb-0">Anthony Morris</h6>
-                        <p class="card-text mb-0">SharePoint Practice Head</p>
-                        <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                        <span><i class="fa-solid fa-square-phone"></i></span> 
-                        <span><i class="fa-solid fa-envelope"></i></span> 
-                        <span><i class="fa-solid fa-comment"></i></span>
-                        <span><i class="fa-solid fa-star-sharp"></i></span>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                 </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mr-0mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                  <p class="card-text mb-0">SharePoint Practice Head</p>
-                  <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                  <span><i class="fa-solid fa-square-phone"></i></span> 
-                  <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                   <span><i class="fa-solid fa-star-sharp"></i></span>
-                  <span><i class="fa-solid fa-heart"></i></span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                   <p class="card-text mb-0">SharePoint Practice Head</p>
-                    <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                   <span><i class="fa-solid fa-square-phone"></i></span> 
-                   <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                     <span><i class="fa-solid fa-star-sharp"></i></span>
-                   <span><i class="fa-solid fa-heart"></i></span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class=""align-flex-start>
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                  <p class="card-text mb-0">SharePoint Practice Head</p>
-                     <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                   <span><i class="fa-solid fa-square-phone"></i></span> 
-                   <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                    <span><i class="fa-solid fa-star-sharp"></i></span>
-                    <span><i class="fa-solid fa-heart"></i></span>
-                 </div>
-                 </div>
-               </div>
-             </div>
-            </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                        <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                     <div class="descc align-flex-end">
-                        <h6 class="card-title mb-0">Anthony Morris</h6>
-                        <p class="card-text mb-0">SharePoint Practice Head</p>
-                        <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                        <span><i class="fa-solid fa-square-phone"></i></span> 
-                        <span><i class="fa-solid fa-envelope"></i></span> 
-                        <span><i class="fa-solid fa-comment"></i></span>
-                        <span><i class="fa-solid fa-star-sharp"></i></span>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                 </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                  <p class="card-text mb-0">SharePoint Practice Head</p>
-                  <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                  <span><i class="fa-solid fa-square-phone"></i></span> 
-                  <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                   <span><i class="fa-solid fa-star-sharp"></i></span>
-                  <span><i class="fa-solid fa-heart"></i></span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start">
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                   <p class="card-text mb-0">SharePoint Practice Head</p>
-                    <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                   <span><i class="fa-solid fa-square-phone"></i></span> 
-                   <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                     <span><i class="fa-solid fa-star-sharp"></i></span>
-                   <span><i class="fa-solid fa-heart"></i></span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 carr">
-              <div class="card border-primary bg-secondary mb-3 mb-resp">
-                <div class="card-body">
-                  <div class="card-desc d-flex ">
-                  <img src="images/user-pic.webp" alt="" width="75" height="75" class=""align-flex-start>
-                  <div class="descc align-flex-end">
-                  <h6 class="card-title mb-0">Anthony Morris</h6>
-                  <p class="card-text mb-0">SharePoint Practice Head</p>
-                     <p class="card-text mb-0"><small class="text-muted">IT Department</small></p>
-                   <span><i class="fa-solid fa-square-phone"></i></span> 
-                   <span><i class="fa-solid fa-envelope"></i></span> 
-                   <span><i class="fa-solid fa-comment"></i></span>
-                    <span><i class="fa-solid fa-star-sharp"></i></span>
-                    <span><i class="fa-solid fa-heart"></i></span>
-                 </div>
-                 </div>
-               </div>
-             </div> -->
-          
-        </div>
-      </section>
+      
+      <section id="boxes"></section>
     </section>
     
   </div>
