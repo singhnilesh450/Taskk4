@@ -340,14 +340,56 @@ for (let i = 0; i < depLi.length; i++) {
       }
     }
     let totalDepartments = container.querySelectorAll("#tit2"); //total departments
-    console.log(totalDepartments.length);
+    console.log(totalDepartments.length, i);
     for (var j = 0; j < totalDepartments.length; j++) {
       if (deptFilter == totalDepartments[j].innerHTML.toUpperCase()) {
-        totalDepartments[j].parentElement.parentElement.style.display = "";
+        totalDepartments[
+          j
+        ].parentElement.parentElement.parentElement.parentElement.parentElement.style.display =
+          "";
         filterResources.push(totalDepartments[j]);
         console.log(filterResources);
       } else {
-        totalDepartments[j].parentElement.parentElement.style.display = "none";
+        totalDepartments[
+          j
+        ].parentElement.parentElement.parentElement.parentElement.parentElement.style.display =
+          "none";
+      }
+    }
+  });
+}
+
+let officeUl = document.querySelector(".list3");
+let officeLi = officeUl.querySelectorAll(".list-items2");
+let boldButton1 = "";
+for (let i = 0; i < depLi.length; i++) {
+  officeLi[i].addEventListener("click", function () {
+    boldButton1 = officeLi[i];
+    filterResources = [];
+    officeLi[i].style.fontWeight = "bold";
+
+    let deptFilter = officeLi[i].innerHTML.toUpperCase(); //name of the particular department
+
+    for (var k = 0; k < depLi.length; k++) {
+      if (k != i) {
+        officeLi[k].style.fontWeight = "normal";
+      }
+    }
+    let totalDepartments = container.querySelectorAll("#tit1"); //total departments
+    console.log(totalDepartments.length, i);
+    for (var j = 0; j < totalDepartments.length; j++) {
+      if (deptFilter == totalDepartments[j].innerHTML.toUpperCase()) {
+        totalDepartments[
+          j
+        ].parentElement.parentElement.parentElement.parentElement.parentElement.style.display =
+          "";
+        filterResources.push(totalDepartments[j]);
+        console.log(filterResources);
+      } else {
+        totalDepartments[
+          j
+        ].parentElement.parentElement.parentElement.parentElement.parentElement.style.display =
+          "none";
       }
     }
   });
