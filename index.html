@@ -162,7 +162,7 @@
     <div class="card-body" id="cardBody">
       <div class="card-desc d-flex " id="cardDesc">
             <img src="images/user-pic.webp" alt="" width="75" height="75" class="align-flex-start" id="imagee">
-         <div class="descc align-flex-end">
+         <div class="descc align-flex-end" action="view">
             <h6 class="card-title mb-0" id="tit0"></h6>
             <p class="card-text mb-0" id="tit1"></p>
             <p class="card-text mb-0" id="tit2"><small class="text-muted"></small></p>
@@ -188,12 +188,12 @@
 •	Skype ID -->
 <div class="modal " id="contactModal">
   <button class="close-modal">&times;</button>
-  <h3>I'm a modal window 😍</h3>
+  <h3 class="Modaltitle">I'm a modal window 😍</h3>
   <form action="" onsubmit="return validation()" id="form-target">
     <div class="form-group">
       <label for="name">First Name</label>
       <input type="text" class="form-control" id="first-name"/>
-      <span id="firstt"class="text-danger font-weight-bold"></span>
+      <span id="firstt" class="text-danger font-weight-bold"></span>
     </div>
     <div class="form-group">
       <label for="name">Last Name</label>
@@ -203,7 +203,7 @@
     <div class="form-group">
       <label for="name">Preferred Name</label>
       <input type="text" class="form-control" />
-      <span id="dd"class="text-danger font-weight-bold"></span>
+      <span id="dd" class="text-danger font-weight-bold"></span>
     </div>
     <div class="form-group">
       <label for="email">Email</label>
@@ -225,13 +225,13 @@
       <select class="form-select form-select-lg" id="department" aria-label="Default select example">
 
         <option selected>Product Engineering</option>
-        <option value="1">IT</option>
-        <option value="2">Product Engineering</option>
-        <option value="3">M365</option>
-        <option value="3">IT</option>
-        <option value="3">Sales</option>
-        <option value="3">MD</option>
-        <option value="3">Human Resources</option>
+        <option value="IT">IT</option>
+        
+        <option value="M365">M365</option>
+        
+        <option value="Sales">Sales</option>
+        <option value="MD">MD</option>
+        <option value="Human Resources">Human Resources</option>
 
       </select>
       <span id="rstt"class="text-danger font-weight-bold"></span>
@@ -250,13 +250,41 @@
      
     
     </form>
-    <button class="btn btn-primary btn-block" id="bt_add_emp">Submit</button>
+    <button class="btn btn-primary btn-block" id="bt_add_emp" >Submit</button>
+    <button class="btn btn-primary btn-block" id="btn_update" >Update</button>
 </div>
 
 
 <div class="overlay hidden"></div>
+<div class="overlay2 hidden"></div>
 
+<!-- description modal -->
+<div class="modal " id="contactModal1">
+  <div class="description_modal_header">
+  <h3 class="desc_modal_title">Employee Description View</h3>
+  <button class="close-modal2">&times;</button>
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" id="editDetailsModal" class="edit_btn" fill="">
+    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+  </svg> -->
+  <i class="fa-solid fa-pen edit_btn fa-2x" id="editDetailsModal" ></i>
+</div>
+  <div class="modal-body text-sm flex flex-col" mid="">
+                    
+    <div class="px-4 py-1 my-2 font-lightbold" id="mid"></div>
+    <div class="px-4 py-1 my-2 font-lightbold">Name: <span id="name-view" class="px-8 py-1 my-2 font-lightbold"></span></div>
+    <div class="px-4 py-1 my-2 font-lightbold">Email: <span id="email-view"></span></div>
+    <div class="px-4 py-1 my-2 font-lightbold">Job Title: <span id="job-view"></span></div>
+    <div class="px-4 py-1 my-2 font-lightbold">Office: <span id="office-view"></span></div>
+    <div class="px-4 py-1 my-2 font-lightbold">Department: <span id="dept-view"></span></div>
+    <sdivpan class="px-4 py-1 my-2 font-lightbold">Phone Number: <span id="phno-view"></span></sdivpan>
+    <div class="px-4 py-1 my-2 font-lightbold">Skype ID: <span id="skype-view" ></span></div>
+   
+  
+   
+
+</div>
     
+</div>
       
 <!-- dummy -->
 <section id="boxes" class="pt-2">
