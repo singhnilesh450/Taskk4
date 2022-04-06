@@ -1,0 +1,22 @@
+{
+  "name": "task_4_sol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhnilesh450/Taskk4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhnilesh450/Taskk4/issues"
+  },
+  "homepage": "https://github.com/singhnilesh450/Taskk4#readme",
+  "devDependencies": {
+    "parcel": "^2.4.0"
+  }
+}
