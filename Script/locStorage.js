@@ -63,13 +63,8 @@ class Local {
     divFolder.querySelector("#tit0").innerHTML = name1 + " " + name2;
     divFolder.querySelector("#tit1").innerHTML = job;
     divFolder.querySelector("#tit2").innerHTML = dept;
-
-    // divFolder = document.importNode(divFolderTemplate, true);
     let view = divFolder.querySelector("[action=view]");
-    console.log("view created");
     view.addEventListener("click", function () {
-      console.log("View is now clickable");
-      // console.log("Inside create details" + rname1 + " " + rname2);
       document.querySelector("#mid").innerHTML = mid;
       document.querySelector("#name-view").innerHTML = name1 + " " + name2;
       document.querySelector("#email-view").innerHTML = Email;
@@ -86,7 +81,6 @@ class Local {
 
     container.appendChild(divFolder);
   }
-  // loadFromBrowser();
 
   openModal2 = function () {
     this.detailsModal.style.display = "block";

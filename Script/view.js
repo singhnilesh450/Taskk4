@@ -1,12 +1,9 @@
 import Local from "./locStorage.js";
-import { validation } from "./validations.js";
+import Validate from "./validations.js";
 class viewUi {
   firstName = "";
   lastName = "";
-  // btnModalAddEmployee = document.getElementById("bt_add_emp");
-  // btnAddEmployee = document.getElementById("add_emp");
   container = document.getElementById("targetRow");
-  // Datacollection = [];
   Datacollection2 = [];
   divFolderArray = [];
   CardCollection = [];
@@ -44,34 +41,20 @@ class viewUi {
     detailsModal.style.display = "none";
     overlay2.style.display = "none";
   };
-  // storeInBowser(Datacollection) {
-  //   console.log(Datacollection);
-  //   let extractedfromArray = JSON.stringify(Datacollection);
-
-  //   localStorage.setItem("data", extractedfromArray);
-  // }
   //Add Employee Button
   addButtonEmp() {
     let firstName = "";
-    let lastName = "";
-    let detailsModal = document.querySelector("#contactModal1");
-    // btnModalAddEmployee = document.getElementById("bt_add_emp");
-    // btnAddEmployee = document.getElementById("add_emp");
-    let container = document.getElementById("targetRow");
     let btnModalAddEmployee = document.getElementById("bt_add_emp");
     let btnAddEmployee = document.getElementById("add_emp");
     let btnsOpenModal = document.querySelector("#add_emp");
     let overlay = document.querySelector(".overlay");
     let btnCloseModal = document.querySelector(".close-modal");
-    let btnCloseModal2 = document.querySelector(".close-modal2");
     let modal = document.querySelector(".modal");
     btnAddEmployee.addEventListener("click", function () {
-      console.log("hi i am clicked this is add button");
       btnsOpenModal.addEventListener("click", function () {
         modal.style.display = "block";
         overlay.style.display = "block";
       });
-
       btnCloseModal.addEventListener("click", function () {
         modal.style.display = "none";
         overlay.style.display = "none";
@@ -92,58 +75,41 @@ class viewUi {
   }
 
   addModalButtonEmp() {
-    let firstName = "";
-    let lastName = "";
     let Datacollection = [];
     let divFolderArray = [];
-    // btnModalAddEmployee = document.getElementById("bt_add_emp");
-    // btnAddEmployee = document.getElementById("add_emp");
     let container = document.getElementById("targetRow");
     let btnModalAddEmployee = document.getElementById("bt_add_emp");
-    let btnAddEmployee = document.getElementById("add_emp");
-    let btnsOpenModal = document.querySelector("#add_emp");
     let overlay = document.querySelector(".overlay");
-    let btnCloseModal = document.querySelector(".close-modal");
-    let detailsModal = document.querySelector("#contactModal1");
-    let btnCloseModal2 = document.querySelector(".close-modal2");
     let modal = document.querySelector(".modal");
     btnModalAddEmployee.addEventListener("click", function () {
-      if (validation()) {
+      //first name
+      let name1 = document.getElementById("first-name").value;
+      //last name
+      let name2 = document.getElementById("last-name").value;
+      //job-title
+      let job = document.getElementById("job-titlee").value;
+      //department
+      let dept = document.getElementById("department").value;
+      //department
+      let Email = document.getElementById("email-check").value;
+      //department
+      let office = document.getElementById("office-input").value;
+      //department
+      let phoneNum = document.getElementById("phoneNum").value;
+      if (Validate.validation(name1, name2, Email)) {
         let templates = document.getElementsByTagName("template")[0];
         let divFolderTemplate = templates.content.querySelector("#upper");
         let divFolder = document.importNode(divFolderTemplate, true);
-        console.log("hi i am clicked this is modal add button");
-        //first name
-        let name1 = document.getElementById("first-name").value;
-        //last name
-        let name2 = document.getElementById("last-name").value;
-        //job-title
-        let job = document.getElementById("job-titlee").value;
-        //department
-        let dept = document.getElementById("department").value;
-        //department
-        let Email = document.getElementById("email-check").value;
-        //department
-        let office = document.getElementById("office-input").value;
-        //department
-        let phoneNum = document.getElementById("phoneNum").value;
-        //department
+
         let skype = document.getElementById("skype").value;
         divFolder.querySelector("#tit0").innerHTML = name1 + " " + name2;
         divFolder.querySelector("#tit1").innerHTML = job;
         divFolder.querySelector("#tit2").innerHTML = dept;
-
-        console.log("hi");
-        // let rid = Datacollection.length;
-        //divFolder.id = "" + rid
         let rjson = localStorage.getItem("data");
         if (rjson) {
           Datacollection = JSON.parse(rjson);
         }
-
         let mid = Datacollection.length;
-        console.log("hdsi");
-
         Datacollection.push({
           mid,
           name1,
@@ -155,61 +121,36 @@ class viewUi {
           phoneNum,
           skype,
         });
-        console.log(Datacollection);
-
         let extractedfromArray = JSON.stringify(Datacollection);
         localStorage.setItem("data", extractedfromArray);
-
         divFolderArray.push(divFolder);
-        console.log("check 123");
-
-        console.log("Hi " + name1 + " " + job + " " + dept);
-
-        console.log("success");
-
-        console.log(divFolder);
         container.appendChild(divFolder);
         document.getElementById("form-target").reset();
         modal.style.display = "none";
         overlay.style.display = "none";
       }
-      location.reload();
     });
   }
 
   Editdetails() {
     let editDetails = document.querySelector(".edit_btn");
-    let firstName = "";
-    let lastName = "";
-    let Datacollection = [];
-
-    let container = document.getElementById("targetRow");
     let btnModalAddEmployee = document.getElementById("bt_add_emp");
-    let btnAddEmployee = document.getElementById("add_emp");
-    let btnsOpenModal = document.querySelector("#add_emp");
     let overlay = document.querySelector(".overlay");
     let btnCloseModal = document.querySelector(".close-modal");
-    let btnCloseModal2 = document.querySelector(".close-modal2");
     let modal = document.querySelector(".modal");
     let detailsModal = document.querySelector("#contactModal1");
     let overlay2 = document.querySelector(".overlay2");
+    let btnUpdateEmployee = document.querySelector("#btn_update");
     editDetails.addEventListener("click", function () {
-      console.log("edit Details clicked");
       modal.style.display = "block";
       overlay.style.display = "block";
       detailsModal.style.display = "none";
       overlay2.style.display = "none";
       btnCloseModal.addEventListener("click", this.closeModal);
       overlay.addEventListener("click", this.closeModal);
-      //console.log(localStorage.getItem("rid"))
       let index = document.querySelector("#mid").innerHTML;
-      console.log(index + " employee needed");
-      // modal.style.display = "block";
       let employeeJson = localStorage.getItem("data");
       let employees = JSON.parse(employeeJson);
-      //console.log(employees[0].name1)
-      let btnUpdateEmployee = document.querySelector("#btn_update");
-
       btnUpdateEmployee.style.display = "block";
       btnModalAddEmployee.style.display = "none";
 
